@@ -1,0 +1,68 @@
+// Сброс внутренних и внешних отступов.
+@mixin clear {
+    margin: 0;
+    padding: 0;
+}
+
+// Очистка элементов списка
+@mixin clear-list {
+    @include clear();
+    list-style: none;
+}
+
+// Центрирование по вертикали и горизонтали Флексом
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-top {
+    align-items: flex-start;
+}
+
+// Центрирование по вертикали и горизонтали Флексом Столбецов
+@mixin flex-center-column($dir:column) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+// Центрирование по вертикали и горизонтали Флексом Строк
+@mixin flex-center-row($dir:row) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+// Настройки шрифтов Меню
+@mixin menu-font {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    text-decoration: none;
+    color: $menu-textcolor;
+}
+
+@mixin firstscreen-content-font-h1 {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 71px;
+    letter-spacing: 0.01em;
+    color: $menu-textcolor;
+}
+
+@mixin firstscreen-content-font-p {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    color: $menu-textcolor;
+}

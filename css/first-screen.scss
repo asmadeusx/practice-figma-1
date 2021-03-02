@@ -1,0 +1,12 @@
+@import "mixins";
+@import "params";
+
+.first-screen {
+    position: relative;
+    
+    &__bg {
+        position: absolute;
+        top: 0px;
+        z-index: 1;
+    }
+}
