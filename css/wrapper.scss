@@ -14,6 +14,8 @@ button:focus {
 }
 
 .wrapper {
+    height: $wrapper-height;
     @include flex-center-column;
     align-items: flex-start;
+    justify-content: space-between;
 }

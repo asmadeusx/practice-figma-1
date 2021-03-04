@@ -36,7 +36,7 @@
 
             .menu__item {
                 @include flex-center;
-                @include menu-font;
+                @include firstscreen-menu-font;
                 height: $header-height;
                 background: transparent;
                 border: none;
@@ -47,7 +47,7 @@
                 }
 
                 .menu__link {
-                    @include menu-font;
+                    @include firstscreen-menu-font;
                     font-size: 16px;
                 }
 
@@ -97,7 +97,7 @@
             }
 
             .content__button {
-                @include menu-font;
+                @include firstscreen-menu-font;
                 height: 51px;
                 width: 160px;
                 border: 2px solid $menu-textcolor;
