@@ -3,10 +3,113 @@
 
 .first-screen {
     position: relative;
-    
+    width: 100%;
+    overflow: hidden;
+
     &__bg {
         position: absolute;
         top: 0px;
         z-index: 1;
+        width: $fs-width;
+        height: $fs-height;
+    }
+}
+
+.first-screen__content {
+    @include flex-center-column;
+
+    .content__header {
+        @include flex-center-row;
+        z-index: 2;
+        width: $fs-width;
+        height: $header-height;
+        justify-content: space-between;
+        background: $header-bg;
+
+        .header__menu {
+            @include flex-center-row;
+            @include clear-list;
+            width: $menu-width;
+            height: $header-height;
+            padding-right: $menu-r-padding;
+            justify-content: space-between;
+
+            .menu__item {
+                @include flex-center;
+                @include menu-font;
+                height: $header-height;
+                background: transparent;
+                border: none;
+                transition: background .25s ease, color .25s ease, box-shadow .15s ease;
+
+                &:hover {
+                    background: darken($color: $header-bg, $amount: 15);
+                }
+
+                .menu__link {
+                    @include menu-font;
+                    font-size: 16px;
+                }
+
+            }
+
+
+        }
+
+        .header__logo {
+            padding-left: $logo-l-padding;
+            height: $header-height;
+            width: $logo-width;
+            @include flex-center;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .content__centralblock {
+        @include flex-center;
+        align-items: normal;
+        z-index: 2;
+        width: $centralblock-width;
+        height: $centralblock-height;
+        position: relative;
+        left: -300px;
+        background: $header-bg;
+
+        .centralblock__content {
+            @include flex-center-column;
+            align-items: normal;
+            position: relative;
+            height: 420px;
+            top: 150px;
+            left: 190px;
+
+            h1 {
+                @include firstscreen-content-font-h1;
+                width: 580px;
+            }
+
+            p {
+                @include clear;
+                @include firstscreen-content-font-p;
+            }
+
+            .content__button {
+                @include menu-font;
+                height: 51px;
+                width: 160px;
+                border: 2px solid $menu-textcolor;
+                margin-top: 15px;
+                background: transparent;
+                transition: background .25s ease, color .25s ease, box-shadow .15s ease;
+
+                &:hover {
+                    color: $header-bg;
+                    background: white;
+                }
+            }
+        }
     }
 }

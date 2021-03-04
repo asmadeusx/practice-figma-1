@@ -1,9 +1,12 @@
-// Header
+//first-screen
+$fs-height: 800px;
+$fs-width: 100%;
 $header-height: 80px;
 $header-width: 100%;
 $header-bg: rgba(0, 91, 193, 0.6);
-$header-bg-center-width: 444px;
-$header-bg-center-height: 800px - $header-height;
+$header-bg-darker: rgba(0, 91, 193, 0.6);
+$centralblock-width: 444px;
+$centralblock-height: 800px - $header-height;
 
 // Левый отступ Логотипа
 $logo-l-padding: 2%;

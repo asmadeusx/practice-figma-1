@@ -22,17 +22,17 @@
 }
 
 // Центрирование по вертикали и горизонтали Флексом Столбецов
-@mixin flex-center-column($dir:column) {
+@mixin flex-center-column {
     display: flex;
-    flex-direction: $dir;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
 
 // Центрирование по вертикали и горизонтали Флексом Строк
-@mixin flex-center-row($dir:row) {
+@mixin flex-center-row {
     display: flex;
-    flex-direction: $dir;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 }

@@ -1,0 +1,37 @@
+@import "mixins";
+@import "params";
+
+.second-screen {
+    position: relative;
+    width: 100%;
+    height: 520px;
+
+    &__projects {
+        @include flex-center-column;
+
+        .projects__header {
+            @include flex-center-row;
+
+            .header__logo {}
+
+            .header__title {}
+
+            .header__sliderbtns {}
+        }
+
+        .projects__slider {
+
+            .slider__slide {
+
+                .slide__bg {}
+
+                .slide__description {
+
+                    .description__header {}
+
+                    .description__text {}
+                }
+            }
+        }
+    }
+}

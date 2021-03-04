@@ -1,0 +1,19 @@
+@import "mixins";
+@import "params";
+
+html,
+body {
+    @include clear;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+button:active,
+button:focus {
+    outline: none;
+}
+
+.wrapper {
+    @include flex-center-column;
+    align-items: flex-start;
+}

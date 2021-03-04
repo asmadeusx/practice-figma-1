@@ -1,33 +1,55 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
   font-family: "Roboto", sans-serif;
 }
 
+button:active,
+button:focus {
+  outline: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-items: flex-start;
+}
+
 .first-screen {
   position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 .first-screen__bg {
   position: absolute;
   top: 0px;
   z-index: 1;
+  width: 100%;
+  height: 800px;
 }
 
-.header {
-  z-index: 2;
-  position: absolute;
-  top: 0;
+.first-screen__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.first-screen__content .content__header {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  z-index: 2;
   width: 100%;
   height: 80px;
   justify-content: space-between;
   background: rgba(0, 91, 193, 0.6);
 }
-.header__menu {
+.first-screen__content .content__header .header__menu {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -35,24 +57,15 @@ html, body {
   margin: 0;
   padding: 0;
   list-style: none;
-  position: absolute;
-  left: 45%;
   width: 400px;
   height: 80px;
   padding-right: 2%;
   justify-content: space-between;
 }
-.header__menu .menu__item-border {
-  border-bottom: 1px solid white;
-  opacity: 0;
-  background-color: white;
-  width: 100%;
-  transition: 0.3s opacity;
-}
-.header__menu .menu__item:hover .menu__item-border {
-  opacity: 1;
-}
-.header__menu .menu__link {
+.first-screen__content .content__header .header__menu .menu__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: Open Sans;
   font-style: normal;
   font-weight: 600;
@@ -60,8 +73,25 @@ html, body {
   line-height: 19px;
   text-decoration: none;
   color: white;
+  height: 80px;
+  background: transparent;
+  border: none;
+  transition: background 0.25s ease, color 0.25s ease, box-shadow 0.15s ease;
 }
-.header__logo {
+.first-screen__content .content__header .header__menu .menu__item:hover {
+  background: rgba(0, 55, 117, 0.6);
+}
+.first-screen__content .content__header .header__menu .menu__item .menu__link {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+.first-screen__content .content__header .header__logo {
   padding-left: 2%;
   height: 80px;
   width: 150px;
@@ -69,24 +99,22 @@ html, body {
   justify-content: center;
   align-items: center;
 }
-.header__logo img {
+.first-screen__content .content__header .header__logo img {
   width: 100%;
 }
-.header__contentbg {
-  z-index: 2;
-  width: 444px;
-  height: 720px;
-  top: 80px;
-  left: 405px;
-  content: "";
-  position: absolute;
-  background: rgba(0, 91, 193, 0.6);
+.first-screen__content .content__centralblock {
   display: flex;
   justify-content: center;
   align-items: center;
   align-items: normal;
+  z-index: 2;
+  width: 444px;
+  height: 720px;
+  position: relative;
+  left: -300px;
+  background: rgba(0, 91, 193, 0.6);
 }
-.header__contentbg .contentbg__centralcontent {
+.first-screen__content .content__centralblock .centralblock__content {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -97,7 +125,7 @@ html, body {
   top: 150px;
   left: 190px;
 }
-.header__contentbg .contentbg__centralcontent h1 {
+.first-screen__content .content__centralblock .centralblock__content h1 {
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
@@ -107,7 +135,7 @@ html, body {
   color: white;
   width: 580px;
 }
-.header__contentbg .contentbg__centralcontent p {
+.first-screen__content .content__centralblock .centralblock__content p {
   margin: 0;
   padding: 0;
   font-family: Open Sans;
@@ -117,7 +145,7 @@ html, body {
   letter-spacing: 0.01em;
   color: white;
 }
-.header__contentbg .contentbg__centralcontent .centralcontent__button {
+.first-screen__content .content__centralblock .centralblock__content .content__button {
   font-family: Open Sans;
   font-style: normal;
   font-weight: 600;
@@ -132,9 +160,27 @@ html, body {
   background: transparent;
   transition: background 0.25s ease, color 0.25s ease, box-shadow 0.15s ease;
 }
-.header__contentbg .contentbg__centralcontent .centralcontent__button:hover {
+.first-screen__content .content__centralblock .centralblock__content .content__button:hover {
   color: rgba(0, 91, 193, 0.6);
   background: white;
+}
+
+.second-screen {
+  position: relative;
+  width: 100%;
+  height: 520px;
+}
+.second-screen__projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.second-screen__projects .projects__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 /*# sourceMappingURL=/style.6b54f5b7.css.map */
