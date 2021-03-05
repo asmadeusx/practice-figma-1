@@ -175,13 +175,13 @@ button:focus {
   margin-top: 45px;
   position: relative;
   width: 100%;
-  height: 730px;
+  height: 750px;
   overflow: hidden;
 }
 .second-screen__projects {
   position: relative;
   width: 1110px;
-  height: 730px;
+  height: 750px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -189,7 +189,7 @@ button:focus {
 }
 .second-screen__projects .projects__header {
   width: 1110px;
-  height: 60px;
+  height: 80px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -287,7 +287,7 @@ button:focus {
 .third-screen__catalog {
   position: relative;
   width: 1110px;
-  height: 395px;
+  height: 420px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -296,7 +296,7 @@ button:focus {
 }
 .third-screen__catalog .catalog__header {
   width: 1110px;
-  height: 60px;
+  height: 80px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -314,25 +314,25 @@ button:focus {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
-.third-screen__catalog .catalog__categories {
+.third-screen__catalog .catalog__brand {
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 60px;
+  height: 65px;
 }
-.third-screen__catalog .catalog__categories .categories__list {
+.third-screen__catalog .catalog__brand .brand__list {
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  height: 35px;
+  height: 40px;
 }
-.third-screen__catalog .catalog__categories .categories__list .list__item {
+.third-screen__catalog .catalog__brand .brand__list .list__item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -343,16 +343,16 @@ button:focus {
   text-decoration: none;
   color: white;
   width: 100px;
-  height: 35px;
+  height: 40px;
   background: rgba(0, 91, 193, 0.6);
   margin: 3px;
   border: none;
   transition: background 0.25s ease, color 0.25s ease, box-shadow 0.15s ease;
 }
-.third-screen__catalog .catalog__categories .categories__list .list__item:hover {
+.third-screen__catalog .catalog__brand .brand__list .list__item:hover {
   background: rgba(0, 55, 117, 0.6);
 }
-.third-screen__catalog .catalog__categories .categories__list .list__item .list__link {
+.third-screen__catalog .catalog__brand .brand__list .list__item .list__link {
   font-family: Open Sans;
   font-style: normal;
   font-weight: 600;
@@ -420,13 +420,108 @@ button:focus {
 .fourth-screen__rent {
   position: relative;
   width: 1110px;
-  height: 700px;
+  height: 1029px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
-
+.fourth-screen__rent .rent__header {
+  width: 1110px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.fourth-screen__rent .rent__header .header__logo {
+  padding-right: 2%;
+}
+.fourth-screen__rent .rent__header .header__title {
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 44px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.fourth-screen__rent .rent__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 949px;
+}
+.fourth-screen__rent .rent__content .content__desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fourth-screen__rent .rent__content .content__desc .desc__text {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  color: black;
+}
+.fourth-screen__rent .rent__content .content__productRent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 2px solid rgba(0, 91, 193, 0.6);
+  width: 665px;
+}
+.fourth-screen__rent .rent__content .content__productRent .productRent__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.fourth-screen__rent .rent__content .content__productRent .productRent__header .header__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fourth-screen__rent .rent__content .content__productRent .productRent__header .header__rentbtns {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: auto;
+}
+.fourth-screen__rent .rent__content .content__productRent .productRent__header .header__rentbtns .rentbtns__btn {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  text-decoration: none;
+  color: white;
+  height: 55px;
+  width: 55px;
+  border: 3px solid rgba(0, 91, 193, 0.6);
+  margin-top: 15px;
+  background: transparent;
+  color: rgba(0, 91, 193, 0.6);
+  transition: background 0.25s ease, color 0.25s ease, box-shadow 0.15s ease;
+}
+.fourth-screen__rent .rent__content .content__productRent .productRent__header .header__rentbtns .rentbtns__btn:hover {
+  color: rgba(0, 91, 193, 0.6);
+  background: rgba(0, 55, 117, 0.6);
+}
+.fourth-screen__rent .rent__content .content__productRent .productRent__productDesc {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.fourth-screen__rent .rent__content .content__productRent .productRent__productDesc .productDesc__photo {
+  width: 100%;
+}
 .fifth-screen {
   margin-top: 45px;
   position: relative;
@@ -439,7 +534,7 @@ button:focus {
 .fifth-screen__news {
   position: relative;
   width: 1110px;
-  height: 730px;
+  height: 750px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -458,7 +553,7 @@ button:focus {
 .sixth-screen__footer {
   position: relative;
   width: 1110px;
-  height: 730px;
+  height: 750px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

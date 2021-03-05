@@ -10,14 +10,14 @@
 
     &__catalog {
         position: relative;
-        width: $tc-catalog-width;
+        width: $contentscreen-width;
         height: $tc-catalog-height;
         @include flex-center-column;
         justify-items: space-between;
 
         .catalog__header {
-            width: $tc-catalog-header-width;
-            height: $tc-catalog-header-height;
+            width: $contentscreen-width;
+            height: $screen-header-height;
             @include flex-center-row;
 
             .header__logo {
@@ -29,13 +29,13 @@
             }
         }
 
-        .catalog__categories {
+        .catalog__brand {
             @include clear;
             @include flex-center;
             width: 100%;
             height: $tc-catalog-categories-list-height + 25; 
 
-            .categories__list {
+            .brand__list {
                 @include clear;
                 @include flex-center-row;                
                 height: $tc-catalog-categories-list-height;

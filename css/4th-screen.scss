@@ -10,9 +10,96 @@
 
     &__rent {
         position: relative;
-        width: $fc-rent-width;
+        width: $contentscreen-width;
         height: $fc-rent-height;
         @include flex-center-column;
 
+        .rent__header {
+            width: $contentscreen-width;
+            height: $fc-rent-header-height;
+            @include flex-center-row;
+
+            .header__logo {
+                padding-right: 2%;
+            }
+
+            .header__title {
+                @include screen-header-font;
+            }
+
+        }
+
+        .rent__content {
+            @include flex-center-row;
+            height: $fc-rent-content-height;
+
+            .content__desc {
+                @include flex-center;
+
+                .desc__text {
+                    @include fourthscreen-rent-desc-font;
+                }
+            }
+
+            .content__productRent {
+                @include flex-center-column;
+                border: 2px solid $header-bg;
+                width: 665px;
+
+                .productRent__header {
+                    @include flex-center-row;
+
+                    .header__title {
+                        @include flex-center;
+
+                    }
+
+                    .header__rentbtns {
+                        @include flex-center-row;
+                        margin-left: auto;
+
+                        .rentbtns__btn {
+                            @include firstscreen-menu-font;
+                            height: $fc-rent-content-productRent-header-rentbtns-height-width;
+                            width: $fc-rent-content-productRent-header-rentbtns-height-width;
+                            border: 3px solid $header-bg;
+                            margin-top: 15px;
+                            background: transparent;
+                            color: $header-bg;
+                            transition: background .25s ease, color .25s ease, box-shadow .15s ease;
+
+                            &:hover {
+                                color: $header-bg;
+                                background: darken($color: $header-bg, $amount: 15);
+                            }
+                        }
+                    }
+                }
+
+                .productRent__productDesc {
+                    @include flex-center-row;
+                    width: 100%;
+
+                    .productDesc__photo {
+                        width: 100%;
+                    }
+
+                    .productDesc__techDesc {
+
+                        .techDesc__header {}
+
+                        .techDesc__Specs {
+
+                            .Specs__items {
+
+                                .Specs__item {
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

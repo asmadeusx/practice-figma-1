@@ -11,13 +11,13 @@
 
     &__projects {
         position: relative;
-        width: $sc-projects-width;
+        width: $contentscreen-width;
         height: $sc-projects-height;
         @include flex-center-column;
 
         .projects__header {
-            width: $sc-projects-header-width;
-            height: $sc-projects-header-height;
+            width: $contentscreen-width;
+            height: $screen-header-height;
             @include flex-center-row;
 
             .header__logo {
@@ -51,7 +51,7 @@
 
             .slider__slide {
                 position: relative;
-                width: $sc-projects-slider-width;
+                width: $contentscreen-width;
                 height: $sc-projects-slider-height;
 
                 .slide__bg {

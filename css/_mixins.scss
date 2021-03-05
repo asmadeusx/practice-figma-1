@@ -118,3 +118,12 @@
     padding-left: 10px;
     @include flex-center;
 }
+
+@mixin fourthscreen-rent-desc-font {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    color: $main-textcolor-2;
+}

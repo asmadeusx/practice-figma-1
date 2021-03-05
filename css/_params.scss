@@ -2,11 +2,12 @@
 $wrapper-height: 100%;
 $main-bgcolor: white;
 $main-textcolor-1: white;
-
+$main-textcolor-2: black;
 //Общие
+$screen-header-height: 80px;
+$contentscreen-width: 1110px;
 
-
-//1st-screen
+//1st-screen - TITLE SCREEN
 $fs-height: 800px;
 $fs-width: 100%;
 $header-height: 80px;
@@ -21,35 +22,41 @@ $menu-width: 400px;
 $menu-textcolor: $main-bgcolor;
 
 //2nd-screen
-$sc-projects-width: 1110px;
-$sc-projects-height: 720px;
-$sc-projects-header-width: $sc-projects-width;
-$sc-projects-header-height: 60px;
-$sc-projects-slider-width: $sc-projects-width;
-$sc-projects-slider-height: 670px;
-$sc-header-btn-width-height: 55px;
-$sc-projects-sliderdesc-height: 110px;
-$sc-projects-sliderdesc-width: 250px;
 $desc-bgcolor: $main-bgcolor;
+$sc-projects-sliderdesc-width: 250px;
+
+$sc-projects-header-height: $screen-header-height;
+$sc-projects-slider-height: 670px;
+$sc-projects-sliderdesc-height: 110px;
+$sc-header-btn-width-height: 55px;
 $sc-projects-height: $sc-projects-header-height + $sc-projects-slider-height;
 
+
 //3rd-screen
-$tc-catalog-width: 1110px;
-$tc-catalog-header-width: $tc-catalog-width;
-$tc-catalog-header-height: 60px;
-$tc-catalog-categories-list-height: $tc-catalog-header-height - 25;
 $tc-catalog-list-item-width: 100px;
-$tc-catalog-list-item-height: $tc-catalog-categories-list-height;
 $tc-catalog-product-item-width: 350px;
-$tc-catalog-product-item-height: 300px;
 $tc-catalog-product-item-desc-width: 265px;
+
+$tc-catalog-header-height: $screen-header-height;
+$tc-catalog-categories-list-height: $tc-catalog-header-height - 40;
+$tc-catalog-list-item-height: $tc-catalog-categories-list-height;
+$tc-catalog-product-item-height: 300px;
 $tc-catalog-product-item-desc-height: 86px;
 $tc-catalog-height: $tc-catalog-header-height + $tc-catalog-categories-list-height + $tc-catalog-product-item-height;
 
 //4th-screen
-$fc-rent-width: 1110px;
 
-$fc-rent-height: 700px;
+$fc-rent-content-height: 800px;
+$fc-rent-content-productRent-header-height: 55px;
+$fc-rent-content-productRent-header-rentbtns-height-width: 55px;
+
+
+$fc-rent-content-productRent-productDesc-height: 894px;
+$fc-rent-content-productRent-height: $fc-rent-content-productRent-header-height + $fc-rent-content-productRent-productDesc-height;
+$fc-rent-content-height: $fc-rent-content-productRent-height;
+$fc-rent-header-height: $screen-header-height;
+$fc-rent-height: $fc-rent-header-height + $fc-rent-content-height;
+// $fc-rent-height: 1000px;
 //5th-screen
 
 //6th-screen
