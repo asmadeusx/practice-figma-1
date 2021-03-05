@@ -1,0 +1,97 @@
+@import "mixins";
+@import "params";
+
+.third-screen {
+    @include flex-center;
+    margin-top: 45px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    &__catalog {
+        position: relative;
+        width: $tc-catalog-width;
+        height: $tc-catalog-height;
+        @include flex-center-column;
+        justify-items: space-between;
+
+        .catalog__header {
+            width: $tc-catalog-header-width;
+            height: $tc-catalog-header-height;
+            @include flex-center-row;
+
+            .header__logo {
+                padding-right: 2%;
+            }
+
+            .header__title {
+                @include screen-header-font;
+            }
+        }
+
+        .catalog__categories {
+            @include clear;
+            @include flex-center;
+            width: 100%;
+            height: $tc-catalog-categories-list-height + 25; 
+
+            .categories__list {
+                @include clear;
+                @include flex-center-row;                
+                height: $tc-catalog-categories-list-height;
+
+                .list__item {
+                    @include flex-center;
+                    @include thirdscreen-categories-font;
+                    width: $tc-catalog-list-item-width;
+                    height: $tc-catalog-list-item-height;
+                    background: $header-bg;
+                    margin: 3px;
+                    border: none;
+                    transition: background .25s ease, color .25s ease, box-shadow .15s ease;
+
+                    &:hover {
+                        background: darken($color: $header-bg, $amount: 15);
+                    }
+
+                    .list__link {
+                        @include firstscreen-menu-font;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .catalog__products {
+            @include flex-center-row;
+            justify-content: space-between;
+            width: 100%;
+
+            .products__item {
+                position: relative;
+                width: $tc-catalog-product-item-width;
+                height: $tc-catalog-product-item-height;
+
+                .item__photo {
+                    position: absolute;
+                    top: 0px;
+                    z-index: 1;
+                    width: 100%;
+                    height: $tc-catalog-product-item-height;
+                }
+
+                .item__description {
+                    position: absolute;
+                    z-index: 2;
+                    top: $tc-catalog-product-item-height - $tc-catalog-product-item-desc-height;
+                    height: $tc-catalog-product-item-desc-height;
+                    width: $tc-catalog-product-item-desc-width;
+                    align-items: flex-start;
+                    background-color: $header-bg;
+                    @include flex-center-column;
+                    @include thirdscreen-product-desc-font;
+                }
+            }
+        }
+    }
+}

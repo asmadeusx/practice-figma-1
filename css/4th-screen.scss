@@ -1,17 +1,17 @@
 @import "mixins";
 @import "params";
 
-.third-screen {
+.fourth-screen {
     margin-top: 45px;
     position: relative;
     width: 100%;
     overflow: hidden;
     @include flex-center;
 
-    &__catalog {
+    &__rent {
         position: relative;
-        width: $sc-projects-width;
-        height: $sc-projects-height;
+        width: $fc-rent-width;
+        height: $fc-rent-height;
         @include flex-center-column;
 
     }

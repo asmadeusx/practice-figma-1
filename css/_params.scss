@@ -1,8 +1,12 @@
 //wrapper
 $wrapper-height: 100%;
 $main-bgcolor: white;
+$main-textcolor-1: white;
 
-//first-screen
+//Общие
+
+
+//1st-screen
 $fs-height: 800px;
 $fs-width: 100%;
 $header-height: 80px;
@@ -16,14 +20,36 @@ $menu-r-padding: 2%;
 $menu-width: 400px;
 $menu-textcolor: $main-bgcolor;
 
-//second-screen
+//2nd-screen
 $sc-projects-width: 1110px;
 $sc-projects-height: 720px;
 $sc-projects-header-width: $sc-projects-width;
 $sc-projects-header-height: 60px;
 $sc-projects-slider-width: $sc-projects-width;
-$sc-projects-slider-height: $sc-projects-height - $sc-projects-header-height;
+$sc-projects-slider-height: 670px;
 $sc-header-btn-width-height: 55px;
-$desc-bgcolor: $main-bgcolor;
 $sc-projects-sliderdesc-height: 110px;
 $sc-projects-sliderdesc-width: 250px;
+$desc-bgcolor: $main-bgcolor;
+$sc-projects-height: $sc-projects-header-height + $sc-projects-slider-height;
+
+//3rd-screen
+$tc-catalog-width: 1110px;
+$tc-catalog-header-width: $tc-catalog-width;
+$tc-catalog-header-height: 60px;
+$tc-catalog-categories-list-height: $tc-catalog-header-height - 25;
+$tc-catalog-list-item-width: 100px;
+$tc-catalog-list-item-height: $tc-catalog-categories-list-height;
+$tc-catalog-product-item-width: 350px;
+$tc-catalog-product-item-height: 300px;
+$tc-catalog-product-item-desc-width: 265px;
+$tc-catalog-product-item-desc-height: 86px;
+$tc-catalog-height: $tc-catalog-header-height + $tc-catalog-categories-list-height + $tc-catalog-product-item-height;
+
+//4th-screen
+$fc-rent-width: 1110px;
+
+$fc-rent-height: 700px;
+//5th-screen
+
+//6th-screen

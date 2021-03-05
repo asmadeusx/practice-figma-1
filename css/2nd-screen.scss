@@ -6,6 +6,7 @@
     margin-top: 45px;
     position: relative;
     width: 100%;
+    height: $sc-projects-height;
     overflow: hidden;
 
     &__projects {
@@ -24,13 +25,7 @@
             }
 
             .header__title {
-                font-family: Oswald;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 30px;
-                line-height: 44px;
-                letter-spacing: 0.05em;
-                text-transform: uppercase;
+                @include screen-header-font;
             }
 
             .header__sliderbtns {
@@ -52,6 +47,7 @@
         }
 
         .projects__slider {
+            @include flex-center-row;
 
             .slider__slide {
                 position: relative;
@@ -75,7 +71,7 @@
                     width: $sc-projects-sliderdesc-width;
                     @include flex-center-column;
                     align-items: flex-start;
-                    background-color: $desc-bgcolor;
+                    background-color: $header-bg;
 
                     .description__header {
                         @include secondscreen-desc-font-h1;
