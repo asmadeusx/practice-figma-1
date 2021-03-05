@@ -1,2 +1,18 @@
 @import "mixins";
 @import "params";
+
+.third-screen {
+    margin-top: 45px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    @include flex-center;
+
+    &__catalog {
+        position: relative;
+        width: $sc-projects-width;
+        height: $sc-projects-height;
+        @include flex-center-column;
+
+    }
+}

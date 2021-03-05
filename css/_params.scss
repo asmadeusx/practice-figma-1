@@ -1,5 +1,5 @@
 //wrapper
-$wrapper-height: 2000px;
+$wrapper-height: 100%;
 $main-bgcolor: white;
 
 //first-screen
@@ -18,16 +18,12 @@ $menu-textcolor: $main-bgcolor;
 
 //second-screen
 $sc-projects-width: 1110px;
-$sc-projects-height: 520px;
+$sc-projects-height: 720px;
 $sc-projects-header-width: $sc-projects-width;
 $sc-projects-header-height: 60px;
 $sc-projects-slider-width: $sc-projects-width;
-$sc-projects-slider-height: $sc-projects-width - $sc-projects-header-height;
+$sc-projects-slider-height: $sc-projects-height - $sc-projects-header-height;
 $sc-header-btn-width-height: 55px;
 $desc-bgcolor: $main-bgcolor;
-$desc-height: 110px;
-$desc-width: 250px;
-
-
-
-
+$sc-projects-sliderdesc-height: 110px;
+$sc-projects-sliderdesc-width: 250px;

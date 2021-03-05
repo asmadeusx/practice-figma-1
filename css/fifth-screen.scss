@@ -1,2 +1,18 @@
 @import "mixins";
 @import "params";
+
+.fifth-screen {
+    margin-top: 45px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    @include flex-center;
+
+    &__news {
+        position: relative;
+        width: $sc-projects-width;
+        height: $sc-projects-height;
+        @include flex-center-column;
+
+    }
+}

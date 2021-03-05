@@ -2,6 +2,8 @@
 @import "params";
 
 .second-screen {
+    @include flex-center;
+    margin-top: 45px;
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -10,7 +12,6 @@
         position: relative;
         width: $sc-projects-width;
         height: $sc-projects-height;
-
         @include flex-center-column;
 
         .projects__header {
@@ -34,6 +35,7 @@
 
             .header__sliderbtns {
                 @include flex-center-row;
+                margin-left: auto;
 
                 .sliderbtns__btn {
                     width: $sc-header-btn-width-height;
@@ -60,17 +62,17 @@
                     position: absolute;
                     top: 0px;
                     z-index: 1;
-                    // width: 100%;
-                    height: 800px
+                    width: 100%;
+                    height: $sc-projects-slider-height;
                 }
 
                 .slide__description {
                     position: absolute;
                     z-index: 2;
-                    top: 0px;
-                    left: 0px;
-                    height: $desc-height;
-                    width: $desc-width;
+                    top: 545px;
+                    left: 850px;
+                    height: $sc-projects-sliderdesc-height;
+                    width: $sc-projects-sliderdesc-width;
                     @include flex-center-column;
                     align-items: flex-start;
                     background-color: $desc-bgcolor;
