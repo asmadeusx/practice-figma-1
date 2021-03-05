@@ -1,0 +1,87 @@
+// Сброс внутренних и внешних отступов.
+@mixin clear {
+    margin: 0;
+    padding: 0;
+}
+
+// Очистка элементов списка
+@mixin clear-list {
+    @include clear();
+    list-style: none;
+}
+
+// Центрирование по вертикали и горизонтали Флексом
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-top {
+    align-items: flex-start;
+}
+
+// Центрирование по вертикали и горизонтали Флексом Столбецов
+@mixin flex-center-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+// Центрирование по вертикали и горизонтали Флексом Строк
+@mixin flex-center-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+// Настройки шрифтов Меню
+@mixin firstscreen-menu-font {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    text-decoration: none;
+    color: $menu-textcolor;
+}
+
+@mixin firstscreen-content-font-h1 {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 71px;
+    letter-spacing: 0.01em;
+    color: $menu-textcolor;
+}
+
+@mixin firstscreen-content-font-p {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    color: $menu-textcolor;
+}
+
+@mixin secondscreen-desc-font-h1 {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    // line-height: 27px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding-left: 5px;
+}
+
+@mixin secondscreen-desc-font-p {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    padding-left: 5px;
+}

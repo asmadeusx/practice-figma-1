@@ -1,0 +1,91 @@
+@import "mixins";
+@import "params";
+
+.second-screen {
+    @include flex-center;
+    margin-top: 45px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    &__projects {
+        position: relative;
+        width: $sc-projects-width;
+        height: $sc-projects-height;
+        @include flex-center-column;
+
+        .projects__header {
+            width: $sc-projects-header-width;
+            height: $sc-projects-header-height;
+            @include flex-center-row;
+
+            .header__logo {
+                padding-right: 2%;
+            }
+
+            .header__title {
+                font-family: Oswald;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 30px;
+                line-height: 44px;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+            }
+
+            .header__sliderbtns {
+                @include flex-center-row;
+                margin-left: auto;
+
+                .sliderbtns__btn {
+                    width: $sc-header-btn-width-height;
+                    height: $sc-header-btn-width-height;
+                    background: transparent;
+                    border: 2px solid $header-bg;
+                    transition: background .25s ease, color .25s ease, box-shadow .15s ease;
+
+                    &:hover {
+                        background: darken($color: $header-bg, $amount: 15);
+                    }
+                }
+            }
+        }
+
+        .projects__slider {
+
+            .slider__slide {
+                position: relative;
+                width: $sc-projects-slider-width;
+                height: $sc-projects-slider-height;
+
+                .slide__bg {
+                    position: absolute;
+                    top: 0px;
+                    z-index: 1;
+                    width: 100%;
+                    height: $sc-projects-slider-height;
+                }
+
+                .slide__description {
+                    position: absolute;
+                    z-index: 2;
+                    top: 545px;
+                    left: 850px;
+                    height: $sc-projects-sliderdesc-height;
+                    width: $sc-projects-sliderdesc-width;
+                    @include flex-center-column;
+                    align-items: flex-start;
+                    background-color: $desc-bgcolor;
+
+                    .description__header {
+                        @include secondscreen-desc-font-h1;
+                    }
+
+                    .description__text {
+                        @include secondscreen-desc-font-p;
+                    }
+                }
+            }
+        }
+    }
+}

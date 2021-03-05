@@ -1,0 +1,18 @@
+@import "mixins";
+@import "params";
+
+.sixth-screen {
+    margin-top: 45px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    @include flex-center;
+
+    &__footer {
+        position: relative;
+        width: $sc-projects-width;
+        height: $sc-projects-height;
+        @include flex-center-column;
+
+    }
+}

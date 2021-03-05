@@ -1,0 +1,29 @@
+//wrapper
+$wrapper-height: 100%;
+$main-bgcolor: white;
+
+//first-screen
+$fs-height: 800px;
+$fs-width: 100%;
+$header-height: 80px;
+$header-width: 100%;
+$header-bg: rgba(0, 91, 193, 0.6);
+$centralblock-width: 444px;
+$centralblock-height: $fs-height - $header-height;
+$logo-l-padding: 2%;
+$logo-width: 150px;
+$menu-r-padding: 2%;
+$menu-width: 400px;
+$menu-textcolor: $main-bgcolor;
+
+//second-screen
+$sc-projects-width: 1110px;
+$sc-projects-height: 720px;
+$sc-projects-header-width: $sc-projects-width;
+$sc-projects-header-height: 60px;
+$sc-projects-slider-width: $sc-projects-width;
+$sc-projects-slider-height: $sc-projects-height - $sc-projects-header-height;
+$sc-header-btn-width-height: 55px;
+$desc-bgcolor: $main-bgcolor;
+$sc-projects-sliderdesc-height: 110px;
+$sc-projects-sliderdesc-width: 250px;
