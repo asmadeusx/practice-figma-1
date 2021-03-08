@@ -4,10 +4,11 @@
   "description": "practice with figma",
   "main": "index.js",
   "dependencies": {
-    "parcel": "^1.12.4",
+    "parcel": "^1.12.4"
+  },
+  "devDependencies": {
     "sass": "^1.32.8"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "parcel build index.html --public-url ./",

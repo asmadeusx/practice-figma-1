@@ -10,7 +10,7 @@
 
     &__footer {
         position: relative;
-        width: $sc-projects-width;
+        width: $contentscreen-width;
         height: $sc-projects-height;
         @include flex-center-column;
 

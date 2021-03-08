@@ -37,51 +37,26 @@
     align-items: center;
 }
 
-// Настройки шрифтов Меню
-@mixin firstscreen-menu-font {
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 19px;
-    text-decoration: none;
-    color: $menu-textcolor;
-}
-
-@mixin firstscreen-content-font-h1 {
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 48px;
-    line-height: 71px;
-    letter-spacing: 0.01em;
-    color: $menu-textcolor;
-}
-
-@mixin firstscreen-content-font-p {
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    letter-spacing: 0.01em;
-    color: $menu-textcolor;
-}
-
-@mixin secondscreen-desc-font-h1 {
+// Настройки шрифтов
+@mixin screen-header-font {
     font-family: Oswald;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    // line-height: 27px;
-    letter-spacing: 0.05em;
+    font-size: 30px;
+    line-height: 44px;
+    color: $main-textcolor-2; //black
     text-transform: uppercase;
-    padding-left: 5px;
 }
 
-@mixin secondscreen-desc-font-p {
+@mixin openSans-white {
     font-family: Open Sans;
-    font-style: normal;
-    font-weight: 300;
+    color: $main-textcolor-1;
+}
+
+@mixin screen-content-h1 {
+    @include openSans-white;
+    font-size: 48px;
+}
+
+@mixin screen-content-p {
+    @include openSans-white;
     font-size: 14px;
-    padding-left: 5px;
 }

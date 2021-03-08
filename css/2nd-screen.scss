@@ -6,17 +6,18 @@
     margin-top: 45px;
     position: relative;
     width: 100%;
+    height: $sc-projects-height;
     overflow: hidden;
 
     &__projects {
         position: relative;
-        width: $sc-projects-width;
+        width: $contentscreen-width;
         height: $sc-projects-height;
         @include flex-center-column;
 
         .projects__header {
-            width: $sc-projects-header-width;
-            height: $sc-projects-header-height;
+            width: $contentscreen-width;
+            height: $screen-header-height;
             @include flex-center-row;
 
             .header__logo {
@@ -24,13 +25,7 @@
             }
 
             .header__title {
-                font-family: Oswald;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 30px;
-                line-height: 44px;
-                letter-spacing: 0.05em;
-                text-transform: uppercase;
+                @include screen-header-font;
             }
 
             .header__sliderbtns {
@@ -52,10 +47,11 @@
         }
 
         .projects__slider {
+            @include flex-center-row;
 
             .slider__slide {
                 position: relative;
-                width: $sc-projects-slider-width;
+                width: $contentscreen-width;
                 height: $sc-projects-slider-height;
 
                 .slide__bg {
@@ -75,14 +71,15 @@
                     width: $sc-projects-sliderdesc-width;
                     @include flex-center-column;
                     align-items: flex-start;
-                    background-color: $desc-bgcolor;
+                    background-color: $header-bg;
 
                     .description__header {
-                        @include secondscreen-desc-font-h1;
+                        @include screen-content-h1;
+                        font-size: 18px;
                     }
 
                     .description__text {
-                        @include secondscreen-desc-font-p;
+                        @include screen-content-p;
                     }
                 }
             }

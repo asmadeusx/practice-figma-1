@@ -1,0 +1,124 @@
+@import "mixins";
+@import "params";
+
+.fourth-screen {
+    margin-top: 45px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    @include flex-center;
+
+    &__rent {
+        position: relative;
+        width: $contentscreen-width;
+        height: $fc-rent-height;
+        @include flex-center-column;
+
+        .rent__header {
+            width: $contentscreen-width;
+            height: $fc-rent-header-height;
+            @include flex-center-row;
+
+            .header__logo {
+                padding-right: 2%;
+            }
+
+            .header__title {
+                @include screen-header-font;
+            }
+
+        }
+
+        .rent__content {
+            @include flex-center-row;
+            height: $fc-rent-content-height;
+
+            .content__desc {
+                position: relative;
+                @include flex-center;
+                width: 40%; // temporaly
+
+                .desc__text {
+                    @include screen-content-p;
+                    font-size: 18px;
+                    line-height: 30px;
+                    color: $main-textcolor-2;
+                }
+            }
+
+            .content__productRent {
+                border: 3px solid $header-bg;
+                position: relative;
+                @include flex-center-column;
+
+                .productRent__header {
+                    @include flex-center-row;
+                    justify-content: space-between;
+                    align-items: baseline;
+                    width: 95%;
+
+                    .header__title {
+                        @include screen-header-font;
+                        @include flex-center;
+                        font-size: 18px;
+                    }
+
+                    .header__rentbtns {
+
+                        .rentbtns__btn {
+                            // @include firstscreen-menu-font;
+                            height: $fc-rent-content-productRent-header-rentbtns-height-width;
+                            width: $fc-rent-content-productRent-header-rentbtns-height-width;
+                            border: 3px solid $header-bg;
+                            margin-top: 15px;
+                            background: transparent;
+                            color: $header-bg;
+                            transition: background .25s ease, color .25s ease, box-shadow .15s ease;
+
+                            &:hover {
+                                color: $header-bg;
+                                background: darken($color: $header-bg, $amount: 15);
+                            }
+                        }
+                    }
+                }
+
+                .productRent__productDesc {
+                    position: relative;
+                    width: 95%;
+                    @include flex-center-row;
+
+                    .productDesc__photo {
+                        width: 250px;
+                        height: 250px;
+                    }
+
+                    .productDesc__techDesc {
+                        @include flex-center-column;
+                        justify-content: space-between;
+                        height: 250px;
+
+                        .techDesc__header {
+                            @include screen-header-font;
+                            color: $main-textcolor-2;
+                            font-size: 20px;
+                        }
+
+                        .techDesc__Specs {
+                            height: 100%;
+                            .Specs__items {
+                                @include flex-center-column;
+                                align-items: flex-start;
+                                .Specs__item {
+                                    @include screen-content-p;
+                                    // font-size: 16px;
+                                    color: $main-textcolor-2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

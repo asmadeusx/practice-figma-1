@@ -36,7 +36,10 @@
 
             .menu__item {
                 @include flex-center;
-                @include firstscreen-menu-font;
+                @include screen-header-font;
+                color: $main-textcolor-1;
+                font-size: 14px;
+                text-decoration: none;
                 height: $header-height;
                 background: transparent;
                 border: none;
@@ -45,15 +48,7 @@
                 &:hover {
                     background: darken($color: $header-bg, $amount: 15);
                 }
-
-                .menu__link {
-                    @include firstscreen-menu-font;
-                    font-size: 16px;
-                }
-
             }
-
-
         }
 
         .header__logo {
@@ -87,17 +82,20 @@
             left: 190px;
 
             h1 {
-                @include firstscreen-content-font-h1;
+                @include screen-content-h1;
+                line-height: 71px;
                 width: 580px;
             }
 
             p {
                 @include clear;
-                @include firstscreen-content-font-p;
+                @include screen-content-p;
             }
 
             .content__button {
-                @include firstscreen-menu-font;
+                @include screen-header-font;
+                color: $main-textcolor-1;
+                font-size: 18px;
                 height: 51px;
                 width: 160px;
                 border: 2px solid $menu-textcolor;
