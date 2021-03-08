@@ -46,17 +46,15 @@ $tc-catalog-height: $tc-catalog-header-height + $tc-catalog-categories-list-heig
 
 //4th-screen
 
-$fc-rent-content-height: 800px;
 $fc-rent-content-productRent-header-height: 55px;
 $fc-rent-content-productRent-header-rentbtns-height-width: 55px;
 
-
-$fc-rent-content-productRent-productDesc-height: 894px;
-$fc-rent-content-productRent-height: $fc-rent-content-productRent-header-height + $fc-rent-content-productRent-productDesc-height;
-$fc-rent-content-height: $fc-rent-content-productRent-height;
+$fc-rent-content-productRent-productDesc-height: 400px;
+$fc-rent-content-height: $fc-rent-content-productRent-header-height + $fc-rent-content-productRent-productDesc-height;
 $fc-rent-header-height: $screen-header-height;
 $fc-rent-height: $fc-rent-header-height + $fc-rent-content-height;
 // $fc-rent-height: 1000px;
+
 //5th-screen
 
 //6th-screen

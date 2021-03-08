@@ -74,11 +74,12 @@
                     background-color: $header-bg;
 
                     .description__header {
-                        @include secondscreen-desc-font-h1;
+                        @include screen-content-h1;
+                        font-size: 18px;
                     }
 
                     .description__text {
-                        @include secondscreen-desc-font-p;
+                        @include screen-content-p;
                     }
                 }
             }

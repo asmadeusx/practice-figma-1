@@ -37,93 +37,26 @@
     align-items: center;
 }
 
-// Настройки шрифтов Меню
-@mixin firstscreen-menu-font {
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 19px;
-    text-decoration: none;
-    color: $menu-textcolor;
-}
-
-@mixin firstscreen-content-font-h1 {
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 48px;
-    line-height: 71px;
-    letter-spacing: 0.01em;
-    color: $menu-textcolor;
-}
-
-@mixin firstscreen-content-font-p {
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    letter-spacing: 0.01em;
-    color: $menu-textcolor;
-}
-
-@mixin secondscreen-desc-font-h1 {
-    font-family: Oswald;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    padding-left: 5px;
-    color: $main-textcolor-1;
-}
-
-@mixin secondscreen-desc-font-p {
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 14px;
-    padding-left: 5px;
-    color: $main-textcolor-1;
-}
-
+// Настройки шрифтов
 @mixin screen-header-font {
     font-family: Oswald;
-    font-style: normal;
-    font-weight: normal;
     font-size: 30px;
     line-height: 44px;
-    letter-spacing: 0.05em;
+    color: $main-textcolor-2; //black
     text-transform: uppercase;
 }
 
-@mixin thirdscreen-categories-font {
+@mixin openSans-white {
     font-family: Open Sans;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    text-decoration: none;
     color: $main-textcolor-1;
 }
 
-@mixin thirdscreen-product-desc-font {
-    font-family: Oswald;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 27px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: $main-textcolor-1;
-    padding-left: 10px;
-    @include flex-center;
+@mixin screen-content-h1 {
+    @include openSans-white;
+    font-size: 48px;
 }
 
-@mixin fourthscreen-rent-desc-font {
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 25px;
-    color: $main-textcolor-2;
+@mixin screen-content-p {
+    @include openSans-white;
+    font-size: 14px;
 }

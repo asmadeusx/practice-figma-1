@@ -34,32 +34,39 @@
             height: $fc-rent-content-height;
 
             .content__desc {
+                position: relative;
                 @include flex-center;
+                width: 40%; // temporaly
 
                 .desc__text {
-                    @include fourthscreen-rent-desc-font;
+                    @include screen-content-p;
+                    font-size: 18px;
+                    line-height: 30px;
+                    color: $main-textcolor-2;
                 }
             }
 
             .content__productRent {
+                border: 3px solid $header-bg;
+                position: relative;
                 @include flex-center-column;
-                border: 2px solid $header-bg;
-                width: 665px;
 
                 .productRent__header {
                     @include flex-center-row;
+                    justify-content: space-between;
+                    align-items: baseline;
+                    width: 95%;
 
                     .header__title {
+                        @include screen-header-font;
                         @include flex-center;
-
+                        font-size: 18px;
                     }
 
                     .header__rentbtns {
-                        @include flex-center-row;
-                        margin-left: auto;
 
                         .rentbtns__btn {
-                            @include firstscreen-menu-font;
+                            // @include firstscreen-menu-font;
                             height: $fc-rent-content-productRent-header-rentbtns-height-width;
                             width: $fc-rent-content-productRent-header-rentbtns-height-width;
                             border: 3px solid $header-bg;
@@ -77,23 +84,35 @@
                 }
 
                 .productRent__productDesc {
+                    position: relative;
+                    width: 95%;
                     @include flex-center-row;
-                    width: 100%;
 
                     .productDesc__photo {
-                        width: 100%;
+                        width: 250px;
+                        height: 250px;
                     }
 
                     .productDesc__techDesc {
+                        @include flex-center-column;
+                        justify-content: space-between;
+                        height: 250px;
 
-                        .techDesc__header {}
+                        .techDesc__header {
+                            @include screen-header-font;
+                            color: $main-textcolor-2;
+                            font-size: 20px;
+                        }
 
                         .techDesc__Specs {
-
+                            height: 100%;
                             .Specs__items {
-
+                                @include flex-center-column;
+                                align-items: flex-start;
                                 .Specs__item {
-
+                                    @include screen-content-p;
+                                    // font-size: 16px;
+                                    color: $main-textcolor-2;
                                 }
                             }
                         }

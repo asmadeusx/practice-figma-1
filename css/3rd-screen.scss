@@ -33,16 +33,18 @@
             @include clear;
             @include flex-center;
             width: 100%;
-            height: $tc-catalog-categories-list-height + 25; 
+            height: $tc-catalog-categories-list-height + 25;
 
             .brand__list {
                 @include clear;
-                @include flex-center-row;                
+                @include flex-center-row;
                 height: $tc-catalog-categories-list-height;
 
                 .list__item {
                     @include flex-center;
-                    @include thirdscreen-categories-font;
+                    @include screen-content-p;
+                    text-decoration: none;
+                    font-size: 20px;
                     width: $tc-catalog-list-item-width;
                     height: $tc-catalog-list-item-height;
                     background: $header-bg;
@@ -55,7 +57,7 @@
                     }
 
                     .list__link {
-                        @include firstscreen-menu-font;
+                        // @include firstscreen-menu-font;
                         font-size: 16px;
                     }
                 }
@@ -88,8 +90,12 @@
                     width: $tc-catalog-product-item-desc-width;
                     align-items: flex-start;
                     background-color: $header-bg;
-                    @include flex-center-column;
-                    @include thirdscreen-product-desc-font;
+                    padding-left: 10px;
+                    @include screen-header-font;
+                    @include flex-center;
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: $main-textcolor-1;
                 }
             }
         }

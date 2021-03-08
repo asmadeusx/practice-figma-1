@@ -14,5 +14,32 @@
         height: $sc-projects-height;
         @include flex-center-column;
 
+        .news__header {
+            width: $contentscreen-width;
+            height: $fc-rent-header-height;
+            @include flex-center-row;
+
+            .header__logo {
+                padding-right: 2%;
+            }
+
+            .header__title {
+                @include screen-header-font;
+            }
+
+            .header__btn {
+                margin-left: auto;
+                width: 190px;
+                height: 51px;
+                background: transparent;
+                border: 2px solid $header-bg;
+                transition: background .25s ease, color .25s ease, box-shadow .15s ease;
+
+                &:hover {
+                    background: darken($color: $header-bg, $amount: 15);
+                }
+            }
+        }
+
     }
 }
