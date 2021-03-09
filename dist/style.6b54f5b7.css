@@ -699,14 +699,98 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: rgba(0, 91, 193, 0.6);
+  width: 100%;
 }
 .sixth-screen__footer {
   position: relative;
   width: 1110px;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+.sixth-screen__footer .footer__header {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  border-bottom: 2px solid white;
+}
+.sixth-screen__footer .footer__header .header__list {
+  width: 100%;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+}
+.sixth-screen__footer .footer__header .header__list .list__item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sixth-screen__footer .footer__siteMap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-items: flex-start;
+  height: 100px;
+  width: 100%;
+  border-bottom: 2px solid white;
+}
+.sixth-screen__footer .footer__siteMap .siteMap__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-items: flex-start;
+}
+.sixth-screen__footer .footer__siteMap .siteMap__list .list__item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 50px;
+}
+.sixth-screen__footer .footer__copyrightDate {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 50px;
+  width: 100%;
+}
+.sixth-screen__footer .footer__copyrightDate .copyrightDate__list {
+  width: 100%;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+}
+.sixth-screen__footer .footer__copyrightDate .list__item {
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  justify-content: space-between;
+}
+.sixth-screen__footer .footer__header::after {
+  content: "";
+  border-bottom: 2px solid white;
+}
+.sixth-screen__footer .footer__siteMap::after {
+  content: "";
+  border-bottom: 2px solid white;
 }
 
 /*# sourceMappingURL=/style.6b54f5b7.css.map */
