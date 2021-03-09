@@ -2,11 +2,7 @@
 @import "params";
 
 .third-screen {
-    @include flex-center;
-    margin-top: 45px;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+    @include screen-position;
 
     &__catalog {
         position: relative;

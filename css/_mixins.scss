@@ -60,3 +60,11 @@
     @include openSans-white;
     font-size: 14px;
 }
+
+@mixin screen-position {
+    margin-top: 45px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    @include flex-center;
+}

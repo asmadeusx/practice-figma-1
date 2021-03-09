@@ -2,11 +2,7 @@
 @import "params";
 
 .fourth-screen {
-    margin-top: 45px;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    @include flex-center;
+    @include screen-position;
 
     &__rent {
         position: relative;
@@ -31,6 +27,7 @@
 
         .rent__content {
             @include flex-center-row;
+            justify-content: space-between;
             height: $fc-rent-content-height;
 
             .content__desc {

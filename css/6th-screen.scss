@@ -2,16 +2,11 @@
 @import "params";
 
 .sixth-screen {
-    margin-top: 45px;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    @include flex-center;
+    @include screen-position;
 
     &__footer {
         position: relative;
         width: $contentscreen-width;
-        height: $sc-projects-height;
         @include flex-center-column;
 
     }

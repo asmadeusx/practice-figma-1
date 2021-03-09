@@ -2,20 +2,15 @@
 @import "params";
 
 .fifth-screen {
-    margin-top: 45px;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    @include flex-center;
+    @include screen-position;
 
     &__news {
         position: relative;
         width: $contentscreen-width;
-        height: $sc-projects-height;
         @include flex-center-column;
 
         .news__header {
-            width: $contentscreen-width;
+            width: 100%;
             height: $fc-rent-header-height;
             @include flex-center-row;
 
@@ -41,5 +36,119 @@
             }
         }
 
+        .news__content {
+            width: 100%;
+            height: 270px;
+            @include flex-center-row;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .content__main {
+                @include flex-center-row;
+                justify-content: space-between;
+                height: 100%;
+                width: 49%;
+
+                .main__img {
+                    height: 100%;
+                    width: 49%;
+                }
+
+                .main__item {
+                    @include flex-center-column;
+                    @include clear;
+                    height: 100%;
+                    width: 50%;
+                    justify-content: space-between;
+                    p {
+                        @include clear;
+                    }
+                    
+                    .item__header {
+                        @include flex-center-row;
+                        width: 100%;
+                        justify-content: space-between;
+                        color: $main-textcolor-2;
+                        font-size: 18px;
+
+                        .header__title {
+                            font-family: 'Oswald';
+                        }
+
+                        .header__date {
+                            font-size: 14px;
+                        }
+                    }
+
+                    .item__text {
+                        @include flex-center-row;
+                        width: 100%;
+                        justify-content: flex-start;
+                    }
+
+                    .item__expandarticle {
+                        @include flex-center-row;
+                        justify-content: space-between;
+                        width: 100%;
+                        text-decoration: underline;
+                        a,
+                        a:visited,
+                        a:active {
+                            @include clear;
+                            color: $main-textcolor-2;
+                        }
+                    }
+                }
+
+            }
+
+            .content__otherNews {
+                height: 100%;
+                width: 49%;
+                @include flex-center-row;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                .otherNews__item {
+                    @include flex-center-column;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    width: 242px;
+                    height: 100%;
+                    p {
+                        @include clear;
+                    }
+
+                    .item__header {
+                        width: 100%;
+                        height: 55px;
+                        font-family: 'Oswald';
+                        color: $main-textcolor-2;
+                        font-size: 18px;
+                    }
+
+                    .item__middleContent {
+                        width: 100%;
+                        height: 55px;
+                    }
+
+                    .item__bottomContent {
+                        @include flex-center-row;
+                        width: 100%;
+                        align-items: flex-end;
+                        justify-content: space-between;
+
+                        .bottomContent__img {
+                            width: 49%;
+                        }
+
+                        .bottomContent__date {
+                            width: 49%;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
