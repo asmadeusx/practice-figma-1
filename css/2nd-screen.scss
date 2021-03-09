@@ -67,16 +67,17 @@
                     @include flex-center-column;
                     align-items: flex-start;
                     background-color: $header-bg;
-                    padding-left: 15px;
                     
 
                     .description__header {
                         @include screen-content-h1;
                         font-size: 18px;
+                        padding-left: 15px;
                     }
 
                     .description__text {
                         @include screen-content-p;
+                        padding-left: 15px;
                     }
                 }
             }
