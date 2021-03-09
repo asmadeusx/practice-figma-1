@@ -2,17 +2,89 @@
 @import "params";
 
 .sixth-screen {
-    margin-top: 45px;
-    position: relative;
+    @include screen-position;
+    background: $header-bg;
     width: 100%;
-    overflow: hidden;
-    @include flex-center;
 
     &__footer {
         position: relative;
         width: $contentscreen-width;
-        height: $sc-projects-height;
+        color: $main-textcolor-1;
         @include flex-center-column;
 
+        .footer__header {
+            @include clear;
+            @include flex-center-row;
+            width: 100%;
+            border-bottom: 2px solid $main-textcolor-1;
+
+            .header__list {
+                width: 100%;
+                padding: 0px;
+                @include flex-center-row;
+                justify-content: space-between;
+
+                .list__item {
+                    @include clear-list;
+                }
+            }
+        }
+
+        .footer__siteMap {
+            @include flex-center-row;
+            align-items: flex-start;
+            height: 100px;
+            width: 100%;
+            border-bottom: 2px solid $main-textcolor-1;
+
+            .siteMap__list {
+                @include flex-center-column;
+                align-items: flex-start;
+
+                .list__item {
+                    @include clear-list;
+                    height: 50px;
+                    a,
+                    a:visited,
+                    a:active {
+                        @include clear;
+                        text-decoration: none;
+                        color: $main-textcolor-1;
+                    }
+                }
+
+            }
+        }
+
+        .footer__copyrightDate {
+            @include flex-center-row;
+            justify-content: space-around;
+            align-items: flex-start;
+            height: 50px;
+            width: 100%;
+
+            .copyrightDate__list {
+                width: 100%;
+                padding: 0px;
+                @include flex-center-row;
+                justify-content: space-between;
+            }
+
+            .list__item {
+                height: 50px;
+                @include clear-list;
+                justify-content: space-between;
+            }
+        }
+
+        .footer__header::after {
+            content: '';
+            border-bottom: 2px solid $main-textcolor-1;
+        }
+
+        .footer__siteMap::after {
+            content: '';
+            border-bottom: 2px solid $main-textcolor-1;
+        }
     }
 }

@@ -2,12 +2,7 @@
 @import "params";
 
 .second-screen {
-    @include flex-center;
-    margin-top: 45px;
-    position: relative;
-    width: 100%;
-    height: $sc-projects-height;
-    overflow: hidden;
+    @include screen-position;
 
     &__projects {
         position: relative;
