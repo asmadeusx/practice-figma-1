@@ -758,6 +758,14 @@ button:focus {
   list-style: none;
   height: 50px;
 }
+.sixth-screen__footer .footer__siteMap .siteMap__list .list__item a,
+.sixth-screen__footer .footer__siteMap .siteMap__list .list__item a:visited,
+.sixth-screen__footer .footer__siteMap .siteMap__list .list__item a:active {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: white;
+}
 .sixth-screen__footer .footer__copyrightDate {
   display: flex;
   flex-direction: row;
