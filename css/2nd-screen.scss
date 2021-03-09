@@ -67,6 +67,8 @@
                     @include flex-center-column;
                     align-items: flex-start;
                     background-color: $header-bg;
+                    padding-left: 15px;
+                    
 
                     .description__header {
                         @include screen-content-h1;
