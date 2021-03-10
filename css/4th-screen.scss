@@ -5,11 +5,10 @@
     @include screen-position;
 
     &__rent {
-        position: relative;
-        width: $contentscreen-width;
-        height: $fc-rent-height;
+        @include screen-content-position;
         @include flex-center-column;
-
+        height: $fc-rent-height;
+        
         .rent__header {
             width: $contentscreen-width;
             height: $fc-rent-header-height;
@@ -22,7 +21,6 @@
             .header__title {
                 @include screen-header-font;
             }
-
         }
 
         .rent__content {
@@ -36,8 +34,7 @@
                 width: 40%; // temporaly
 
                 .desc__text {
-                    @include screen-content-p;
-                    font-size: 18px;
+                    @include screen-content-p(18px);
                     line-height: 30px;
                     color: $main-textcolor-2;
                 }
@@ -55,15 +52,13 @@
                     width: 95%;
 
                     .header__title {
-                        @include screen-header-font;
+                        @include screen-header-font(18px);
                         @include flex-center;
-                        font-size: 18px;
                     }
 
                     .header__rentbtns {
 
                         .rentbtns__btn {
-                            // @include firstscreen-menu-font;
                             height: $fc-rent-content-productRent-header-rentbtns-height-width;
                             width: $fc-rent-content-productRent-header-rentbtns-height-width;
                             border: 3px solid $header-bg;
@@ -96,19 +91,19 @@
                         height: 250px;
 
                         .techDesc__header {
-                            @include screen-header-font;
+                            @include screen-header-font(20px);
                             color: $main-textcolor-2;
-                            font-size: 20px;
                         }
 
                         .techDesc__Specs {
                             height: 100%;
+
                             .Specs__items {
                                 @include flex-center-column;
                                 align-items: flex-start;
+
                                 .Specs__item {
-                                    @include screen-content-p;
-                                    // font-size: 16px;
+                                    @include screen-content-p(16px);
                                     color: $main-textcolor-2;
                                 }
                             }

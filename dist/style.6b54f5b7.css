@@ -1,0 +1,800 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+button:active,
+button:focus {
+  outline: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.first-screen {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.first-screen__bg {
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+  height: 800px;
+}
+
+.first-screen__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.first-screen__content .content__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 2;
+  width: 100%;
+  height: 80px;
+  justify-content: space-between;
+  background: rgba(0, 91, 193, 0.6);
+}
+.first-screen__content .content__header .header__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 400px;
+  height: 80px;
+  padding-right: 2%;
+  justify-content: space-between;
+}
+.first-screen__content .content__header .header__menu .menu__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Oswald";
+  color: black;
+  font-size: 14px;
+  line-height: 44px;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  height: 80px;
+  background: transparent;
+  border: none;
+  transition: background 0.25s ease, color 0.25s ease, box-shadow 0.15s ease;
+}
+.first-screen__content .content__header .header__menu .menu__item:hover {
+  background: rgba(0, 55, 117, 0.6);
+}
+.first-screen__content .content__header .header__logo {
+  padding-left: 2%;
+  height: 80px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.first-screen__content .content__header .header__logo img {
+  width: 100%;
+}
+.first-screen__content .content__centralblock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: normal;
+  z-index: 2;
+  width: 444px;
+  height: 720px;
+  position: relative;
+  left: -300px;
+  background: rgba(0, 91, 193, 0.6);
+}
+.first-screen__content .content__centralblock .centralblock__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-items: normal;
+  position: relative;
+  height: 420px;
+  top: 150px;
+  left: 190px;
+}
+.first-screen__content .content__centralblock .centralblock__content h1 {
+  font-family: Open Sans;
+  color: white;
+  font-size: 48px;
+  line-height: 71px;
+  width: 580px;
+}
+.first-screen__content .content__centralblock .centralblock__content p {
+  margin: 0;
+  padding: 0;
+  font-family: Open Sans;
+  color: white;
+  font-size: 14px;
+}
+.first-screen__content .content__centralblock .centralblock__content .content__button {
+  font-family: "Oswald";
+  color: black;
+  font-size: 18px;
+  line-height: 44px;
+  text-transform: uppercase;
+  color: white;
+  height: 51px;
+  width: 160px;
+  border: 2px solid white;
+  margin-top: 15px;
+  background: transparent;
+  transition: background 0.25s ease, color 0.25s ease, box-shadow 0.15s ease;
+}
+.first-screen__content .content__centralblock .centralblock__content .content__button:hover {
+  color: rgba(0, 91, 193, 0.6);
+  background: white;
+}
+
+.second-screen {
+  margin-top: 45px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.second-screen__projects {
+  position: relative;
+  width: 1110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 750px;
+}
+.second-screen__projects .projects__header {
+  width: 1110px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.second-screen__projects .projects__header .header__logo {
+  padding-right: 2%;
+}
+.second-screen__projects .projects__header .header__title {
+  font-family: "Oswald";
+  color: black;
+  font-size: 30px;
+  line-height: 44px;
+  text-transform: uppercase;
+}
+.second-screen__projects .projects__header .header__sliderbtns {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: auto;
+}
+.second-screen__projects .projects__header .header__sliderbtns .sliderbtns__btn {
+  width: 55px;
+  height: 55px;
+  background: transparent;
+  border: 2px solid rgba(0, 91, 193, 0.6);
+  transition: background 0.25s ease, color 0.25s ease, box-shadow 0.15s ease;
+}
+.second-screen__projects .projects__header .header__sliderbtns .sliderbtns__btn:hover {
+  background: rgba(0, 55, 117, 0.6);
+}
+.second-screen__projects .projects__slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.second-screen__projects .projects__slider .slider__slide {
+  position: relative;
+  width: 1110px;
+  height: 670px;
+}
+.second-screen__projects .projects__slider .slider__slide .slide__bg {
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+  height: 670px;
+}
+.second-screen__projects .projects__slider .slider__slide .slide__description {
+  position: absolute;
+  z-index: 2;
+  top: 545px;
+  left: 850px;
+  height: 110px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-items: flex-start;
+  background-color: rgba(0, 91, 193, 0.6);
+}
+.second-screen__projects .projects__slider .slider__slide .slide__description .description__header {
+  font-family: Open Sans;
+  color: white;
+  font-size: 18px;
+  padding-left: 15px;
+}
+.second-screen__projects .projects__slider .slider__slide .slide__description .description__text {
+  font-family: Open Sans;
+  color: white;
+  font-size: 14px;
+  padding-left: 15px;
+}
+
+.third-screen {
+  margin-top: 45px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.third-screen__catalog {
+  position: relative;
+  width: 1110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 430px;
+  justify-items: space-between;
+}
+.third-screen__catalog .catalog__header {
+  width: 1110px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.third-screen__catalog .catalog__header .header__logo {
+  padding-right: 2%;
+}
+.third-screen__catalog .catalog__header .header__title {
+  font-family: "Oswald";
+  color: black;
+  font-size: 30px;
+  line-height: 44px;
+  text-transform: uppercase;
+}
+.third-screen__catalog .catalog__brand {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 75px;
+}
+.third-screen__catalog .catalog__brand .brand__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+}
+.third-screen__catalog .catalog__brand .brand__list .list__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Open Sans;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  width: 105px;
+  height: 50px;
+  background: rgba(0, 91, 193, 0.6);
+  margin: 3px;
+  border: none;
+  transition: background 0.25s ease, color 0.25s ease, box-shadow 0.15s ease;
+}
+.third-screen__catalog .catalog__brand .brand__list .list__item:hover {
+  background: rgba(0, 55, 117, 0.6);
+}
+.third-screen__catalog .catalog__products {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.third-screen__catalog .catalog__products .products__item {
+  position: relative;
+  width: 350px;
+  height: 300px;
+}
+.third-screen__catalog .catalog__products .products__item .item__photo {
+  position: absolute;
+  background: rgba(221, 221, 221, 0.2);
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+  height: 300px;
+}
+.third-screen__catalog .catalog__products .products__item .item__description {
+  position: absolute;
+  z-index: 2;
+  top: 214px;
+  height: 86px;
+  width: 265px;
+  align-items: flex-start;
+  background-color: rgba(0, 91, 193, 0.6);
+  padding-left: 10px;
+  font-family: "Oswald";
+  color: black;
+  font-size: 18px;
+  line-height: 44px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 27px;
+  color: white;
+}
+
+.fourth-screen {
+  margin-top: 45px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fourth-screen__rent {
+  position: relative;
+  width: 1110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 535px;
+}
+.fourth-screen__rent .rent__header {
+  width: 1110px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.fourth-screen__rent .rent__header .header__logo {
+  padding-right: 2%;
+}
+.fourth-screen__rent .rent__header .header__title {
+  font-family: "Oswald";
+  color: black;
+  font-size: 30px;
+  line-height: 44px;
+  text-transform: uppercase;
+}
+.fourth-screen__rent .rent__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  height: 455px;
+}
+.fourth-screen__rent .rent__content .content__desc {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+.fourth-screen__rent .rent__content .content__desc .desc__text {
+  font-family: Open Sans;
+  color: white;
+  font-size: 18px;
+  line-height: 30px;
+  color: black;
+}
+.fourth-screen__rent .rent__content .content__productRent {
+  border: 3px solid rgba(0, 91, 193, 0.6);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.fourth-screen__rent .rent__content .content__productRent .productRent__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 95%;
+}
+.fourth-screen__rent .rent__content .content__productRent .productRent__header .header__title {
+  font-family: "Oswald";
+  color: black;
+  font-size: 18px;
+  line-height: 44px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fourth-screen__rent .rent__content .content__productRent .productRent__header .header__rentbtns .rentbtns__btn {
+  height: 55px;
+  width: 55px;
+  border: 3px solid rgba(0, 91, 193, 0.6);
+  margin-top: 15px;
+  background: transparent;
+  color: rgba(0, 91, 193, 0.6);
+  transition: background 0.25s ease, color 0.25s ease, box-shadow 0.15s ease;
+}
+.fourth-screen__rent .rent__content .content__productRent .productRent__header .header__rentbtns .rentbtns__btn:hover {
+  color: rgba(0, 91, 193, 0.6);
+  background: rgba(0, 55, 117, 0.6);
+}
+.fourth-screen__rent .rent__content .content__productRent .productRent__productDesc {
+  position: relative;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.fourth-screen__rent .rent__content .content__productRent .productRent__productDesc .productDesc__photo {
+  width: 250px;
+  height: 250px;
+}
+.fourth-screen__rent .rent__content .content__productRent .productRent__productDesc .productDesc__techDesc {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  height: 250px;
+}
+.fourth-screen__rent .rent__content .content__productRent .productRent__productDesc .productDesc__techDesc .techDesc__header {
+  font-family: "Oswald";
+  color: black;
+  font-size: 20px;
+  line-height: 44px;
+  text-transform: uppercase;
+  color: black;
+}
+.fourth-screen__rent .rent__content .content__productRent .productRent__productDesc .productDesc__techDesc .techDesc__Specs {
+  height: 100%;
+}
+.fourth-screen__rent .rent__content .content__productRent .productRent__productDesc .productDesc__techDesc .techDesc__Specs .Specs__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-items: flex-start;
+}
+.fourth-screen__rent .rent__content .content__productRent .productRent__productDesc .productDesc__techDesc .techDesc__Specs .Specs__items .Specs__item {
+  font-family: Open Sans;
+  color: white;
+  font-size: 16px;
+  color: black;
+}
+
+.fifth-screen {
+  margin-top: 45px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fifth-screen__news {
+  position: relative;
+  width: 1110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.fifth-screen__news .news__header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.fifth-screen__news .news__header .header__logo {
+  padding-right: 2%;
+}
+.fifth-screen__news .news__header .header__title {
+  font-family: "Oswald";
+  color: black;
+  font-size: 30px;
+  line-height: 44px;
+  text-transform: uppercase;
+}
+.fifth-screen__news .news__header .header__btn {
+  margin-left: auto;
+  width: 190px;
+  height: 51px;
+  background: transparent;
+  border: 2px solid rgba(0, 91, 193, 0.6);
+  transition: background 0.25s ease, color 0.25s ease, box-shadow 0.15s ease;
+}
+.fifth-screen__news .news__header .header__btn:hover {
+  background: rgba(0, 55, 117, 0.6);
+}
+.fifth-screen__news .news__content {
+  width: 100%;
+  height: 270px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.fifth-screen__news .news__content .content__main {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 49%;
+}
+.fifth-screen__news .news__content .content__main .main__img {
+  height: 100%;
+  width: 49%;
+}
+.fifth-screen__news .news__content .content__main .main__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 50%;
+  justify-content: space-between;
+}
+.fifth-screen__news .news__content .content__main .main__item p {
+  margin: 0;
+  padding: 0;
+}
+.fifth-screen__news .news__content .content__main .main__item .item__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  color: black;
+  font-size: 18px;
+}
+.fifth-screen__news .news__content .content__main .main__item .item__header .header__title {
+  font-family: "Oswald";
+}
+.fifth-screen__news .news__content .content__main .main__item .item__header .header__date {
+  font-size: 14px;
+}
+.fifth-screen__news .news__content .content__main .main__item .item__text {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+}
+.fifth-screen__news .news__content .content__main .main__item .item__expandarticle {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-decoration: underline;
+}
+.fifth-screen__news .news__content .content__main .main__item .item__expandarticle a,
+.fifth-screen__news .news__content .content__main .main__item .item__expandarticle a:visited,
+.fifth-screen__news .news__content .content__main .main__item .item__expandarticle a:active {
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+.fifth-screen__news .news__content .content__otherNews {
+  height: 100%;
+  width: 49%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.fifth-screen__news .news__content .content__otherNews .otherNews__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 242px;
+  height: 100%;
+}
+.fifth-screen__news .news__content .content__otherNews .otherNews__item p {
+  margin: 0;
+  padding: 0;
+}
+.fifth-screen__news .news__content .content__otherNews .otherNews__item .item__header {
+  width: 100%;
+  height: 55px;
+  font-family: "Oswald";
+  color: black;
+  font-size: 18px;
+}
+.fifth-screen__news .news__content .content__otherNews .otherNews__item .item__middleContent {
+  width: 100%;
+  height: 55px;
+}
+.fifth-screen__news .news__content .content__otherNews .otherNews__item .item__bottomContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.fifth-screen__news .news__content .content__otherNews .otherNews__item .item__bottomContent .bottomContent__img {
+  width: 49%;
+}
+.fifth-screen__news .news__content .content__otherNews .otherNews__item .item__bottomContent .bottomContent__date {
+  width: 49%;
+  font-size: 14px;
+}
+
+.sixth-screen {
+  margin-top: 45px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 91, 193, 0.6);
+  width: 100%;
+}
+.sixth-screen__footer {
+  position: relative;
+  width: 1110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+}
+.sixth-screen__footer .footer__header {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  border-bottom: 2px solid white;
+}
+.sixth-screen__footer .footer__header .header__list {
+  width: 100%;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+}
+.sixth-screen__footer .footer__header .header__list .list__item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sixth-screen__footer .footer__siteMap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-items: flex-start;
+  height: 100px;
+  width: 100%;
+  border-bottom: 2px solid white;
+}
+.sixth-screen__footer .footer__siteMap .siteMap__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-items: flex-start;
+}
+.sixth-screen__footer .footer__siteMap .siteMap__list .list__item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 50px;
+}
+.sixth-screen__footer .footer__siteMap .siteMap__list .list__item a,
+.sixth-screen__footer .footer__siteMap .siteMap__list .list__item a:visited,
+.sixth-screen__footer .footer__siteMap .siteMap__list .list__item a:active {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: white;
+}
+.sixth-screen__footer .footer__copyrightDate {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 50px;
+  width: 100%;
+}
+.sixth-screen__footer .footer__copyrightDate .copyrightDate__list {
+  width: 100%;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+}
+.sixth-screen__footer .footer__copyrightDate .list__item {
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  justify-content: space-between;
+}
+.sixth-screen__footer .footer__header::after {
+  content: "";
+  border-bottom: 2px solid white;
+}
+.sixth-screen__footer .footer__siteMap::after {
+  content: "";
+  border-bottom: 2px solid white;
+}
+
+/*# sourceMappingURL=/style.6b54f5b7.css.map */

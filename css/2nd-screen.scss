@@ -5,10 +5,8 @@
     @include screen-position;
 
     &__projects {
-        position: relative;
-        width: $contentscreen-width;
+        @include screen-content-position;
         height: $sc-projects-height;
-        @include flex-center-column;
 
         .projects__header {
             width: $contentscreen-width;
@@ -70,8 +68,7 @@
                     
 
                     .description__header {
-                        @include screen-content-h1;
-                        font-size: 18px;
+                        @include screen-content-h1(18px);
                         padding-left: 15px;
                     }
 

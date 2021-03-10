@@ -7,10 +7,8 @@
     width: 100%;
 
     &__footer {
-        position: relative;
-        width: $contentscreen-width;
+        @include screen-content-position;
         color: $main-textcolor-1;
-        @include flex-center-column;
 
         .footer__header {
             @include clear;

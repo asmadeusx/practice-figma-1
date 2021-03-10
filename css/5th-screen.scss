@@ -5,9 +5,7 @@
     @include screen-position;
 
     &__news {
-        position: relative;
-        width: $contentscreen-width;
-        @include flex-center-column;
+        @include screen-content-position;
 
         .news__header {
             width: 100%;
