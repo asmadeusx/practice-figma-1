@@ -36,9 +36,8 @@
 
             .menu__item {
                 @include flex-center;
-                @include screen-header-font;
+                @include screen-header-font(14px);
                 color: $main-textcolor-1;
-                font-size: 14px;
                 text-decoration: none;
                 height: $header-height;
                 background: transparent;
@@ -93,9 +92,8 @@
             }
 
             .content__button {
-                @include screen-header-font;
+                @include screen-header-font(18px);
                 color: $main-textcolor-1;
-                font-size: 18px;
                 height: 51px;
                 width: 160px;
                 border: 2px solid $menu-textcolor;

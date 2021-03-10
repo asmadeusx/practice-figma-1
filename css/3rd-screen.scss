@@ -5,10 +5,8 @@
     @include screen-position;
 
     &__catalog {
-        position: relative;
-        width: $contentscreen-width;
+        @include screen-content-position;
         height: $tc-catalog-height;
-        @include flex-center-column;
         justify-items: space-between;
 
         .catalog__header {
@@ -38,9 +36,8 @@
 
                 .list__item {
                     @include flex-center;
-                    @include screen-content-p;
+                    @include screen-content-p(20px);
                     text-decoration: none;
-                    font-size: 20px;
                     width: $tc-catalog-list-item-width;
                     height: $tc-catalog-list-item-height;
                     background: $header-bg;
@@ -50,11 +47,6 @@
 
                     &:hover {
                         background: darken($color: $header-bg, $amount: 15);
-                    }
-
-                    .list__link {
-                        // @include firstscreen-menu-font;
-                        font-size: 16px;
                     }
                 }
             }
@@ -72,6 +64,7 @@
 
                 .item__photo {
                     position: absolute;
+                    background: rgba($color: #dddddd, $alpha: 0.2);
                     top: 0px;
                     z-index: 1;
                     width: 100%;
@@ -87,9 +80,8 @@
                     align-items: flex-start;
                     background-color: $header-bg;
                     padding-left: 10px;
-                    @include screen-header-font;
+                    @include screen-header-font(18px);
                     @include flex-center;
-                    font-size: 18px;
                     line-height: 27px;
                     color: $main-textcolor-1;
                 }

@@ -37,13 +37,29 @@
     align-items: center;
 }
 
+@mixin screen-position {
+    margin-top: 45px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    @include flex-center;
+}
+
+@mixin screen-content-position {
+    position: relative;
+    width: $contentscreen-width;
+    @include flex-center-column;
+}
+
 // Настройки шрифтов
-@mixin screen-header-font {
-    font-family: Oswald;
-    font-size: 30px;
-    line-height: 44px;
-    color: $main-textcolor-2; //black
-    text-transform: uppercase;
+@mixin oswald-white {
+    font-family: 'Oswald';
+    color: $main-textcolor-1;
+}
+
+@mixin oswald-black {
+    font-family: 'Oswald';
+    color: $main-textcolor-2;
 }
 
 @mixin openSans-white {
@@ -51,20 +67,24 @@
     color: $main-textcolor-1;
 }
 
-@mixin screen-content-h1 {
-    @include openSans-white;
-    font-size: 48px;
+@mixin openSans-black {
+    font-family: Open Sans;
+    color: $main-textcolor-2;
 }
 
-@mixin screen-content-p {
-    @include openSans-white;
-    font-size: 14px;
+@mixin screen-header-font($fs:30px) {
+    @include oswald-black;
+    font-size: $fs;
+    line-height: 44px;
+    text-transform: uppercase;
 }
 
-@mixin screen-position {
-    margin-top: 45px;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    @include flex-center;
+@mixin screen-content-h1($fs:48px) {
+    @include openSans-white;
+    font-size: $fs;
+}
+
+@mixin screen-content-p($fs:14px) {
+    @include openSans-white;
+    font-size: $fs;
 }
