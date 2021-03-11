@@ -104,14 +104,15 @@ function s3AddBtnsToBrandList() {
 }
 // Создание Продуктов по выбранному Бренду после клика.
 function s3createProductItembyBrand(inHTML) {
+    s3CreateThreeProductItems(0);
     for (let i1 = 0; i1 < s3brandList.length; i1++) {
-        // s3CreateThreeProductItems(i1);
         const s3ProductsItems = document.querySelectorAll('.products__item');
         console.log(s3ProductsItems);
-        // s3ProductsItems.classList.add(`${s3brandList[i1].toLowerCase()}`);
     }
 }
 
+
+// Создание 3 дивов с картинками по брендам
 function s3CreateThreeProductItems(x) {
     const s3brandProducts = document.querySelector('.catalog__products');
     for (let i = 0; i < 3; i++) {

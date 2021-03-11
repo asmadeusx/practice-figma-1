@@ -201,12 +201,14 @@ function s3AddBtnsToBrandList() {
 
 
 function s3createProductItembyBrand(inHTML) {
+  s3CreateThreeProductItems(0);
+
   for (var i1 = 0; i1 < s3brandList.length; i1++) {
-    // s3CreateThreeProductItems(i1);
     var s3ProductsItems = document.querySelectorAll('.products__item');
-    console.log(s3ProductsItems); // s3ProductsItems.classList.add(`${s3brandList[i1].toLowerCase()}`);
+    console.log(s3ProductsItems);
   }
-}
+} // Создание 3 дивов с картинками по брендам
+
 
 function s3CreateThreeProductItems(x) {
   var s3brandProducts = document.querySelector('.catalog__products');
@@ -255,7 +257,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "11278" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "7351" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
