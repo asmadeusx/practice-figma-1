@@ -47,24 +47,34 @@
                     <div class="header__title">Наши Проекты</div>
                     <div class="header__sliderbtns">
                         <button class="sliderbtns__btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button id='playpause'class="sliderbtns__btn pause"><i class="fas fa-pause"></i></button>
                         <button class="sliderbtns__btn next"><i class="fas fa-chevron-right"></i></button>
                     </div>
                 </header>
                 <div class="projects__slider">
-                    <div class="slider__slide">
-                        <img src="./img/slide-1.png" alt="slide-1" class="slide__bg">
-                        <div class="slide__description">
-                            <h1 class="description__header">ССК “ОЛИМП”</h1>
-                            <p class="description__text">Световое оформление форума “Шубы-2019”</p>
-                        </div>
-                    </div>
-                    <div class="slider__slide hidden">
-                        <img src="./img/slide-2.png" alt="slide-2" class="slide__bg">
-                        <div class="slide__description">
-                            <h1 class="description__header">ССК “ОЛИМП”</h1>
-                            <p class="description__text">Музыкальное выступление “Звук-2019”</p>
-                        </div>
-                    </div>
+                    <ul class="slider__list">
+                        <li id='first' class="list__slide show">
+                            <img src="./img/slide-1.png" alt="slide-1" class="slide__bg">
+                            <div class="slide__description">
+                                <h1 class="description__header">ССК “ОЛИМП” 1</h1>
+                                <p class="description__text">Световое оформление форума “Шубы-2019”</p>
+                            </div>
+                        </li>
+                        <li id='second' class="list__slide">
+                            <img src="./img/slide-2.png" alt="slide-2" class="slide__bg">
+                            <div class="slide__description">
+                                <h1 class="description__header">ССК “ОЛИМП” 2</h1>
+                                <p class="description__text">Музыкальное выступление “Звук-2019”</p>
+                            </div>
+                        </li>
+                        <li id='third' class="list__slide">
+                            <img src="./img/slide-3.png" alt="slide-2" class="slide__bg">
+                            <div class="slide__description">
+                                <h1 class="description__header">ССК “ОЛИМП” 3</h1>
+                                <p class="description__text">Музыкальное выступление “Звук-2020”</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -80,7 +90,7 @@
                     </ul>
                 </div>
                 <div class="catalog__products">
-                <div class="products__item">
+                    <div class="products__item">
                         <img src="./img/robe-item-1.png" alt="robe-item-1" class="item__photo">
                         <div class="item__description">
                             <p>Статичные светодиодные приборы</p>

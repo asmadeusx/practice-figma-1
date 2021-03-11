@@ -41,41 +41,63 @@
 
         .projects__slider {
             @include flex-center-row;
+            position: relative;
+            height: $sc-projects-slider-height;
+            width: $contentscreen-width;
+            overflow: hidden;
 
-            .slider__slide {
-                position: relative;
+            .slider__list {
+                // @include flex-center;
                 width: $contentscreen-width;
                 height: $sc-projects-slider-height;
+                @include clear-list;
 
-                .slide__bg {
+                .list__slide {
                     position: absolute;
                     top: 0px;
-                    z-index: 1;
-                    width: 100%;
+                    left: 0px;
+                    width: $contentscreen-width;
                     height: $sc-projects-slider-height;
+                    opacity: 0;
+                    z-index: 1;
+                    transition: opacity 1s;
+
+                    .slide__bg {
+                        position: absolute;
+                        top: 0px;
+                        z-index: 1;
+                        width: 100%;
+                        height: $sc-projects-slider-height;
+                    }
+
+                    .slide__description {
+                        position: absolute;
+                        z-index: 2;
+                        top: 545px;
+                        left: 850px;
+                        height: $sc-projects-sliderdesc-height;
+                        width: $sc-projects-sliderdesc-width;
+                        @include flex-center-column;
+                        align-items: flex-start;
+                        background-color: $header-bg;
+
+
+                        .description__header {
+                            @include screen-content-h1(18px);
+                            padding-left: 15px;
+                        }
+
+                        .description__text {
+                            @include screen-content-p;
+                            padding-left: 15px;
+                        }
+                    }
+
                 }
 
-                .slide__description {
-                    position: absolute;
+                .show {
+                    opacity: 1;
                     z-index: 2;
-                    top: 545px;
-                    left: 850px;
-                    height: $sc-projects-sliderdesc-height;
-                    width: $sc-projects-sliderdesc-width;
-                    @include flex-center-column;
-                    align-items: flex-start;
-                    background-color: $header-bg;
-                    
-
-                    .description__header {
-                        @include screen-content-h1(18px);
-                        padding-left: 15px;
-                    }
-
-                    .description__text {
-                        @include screen-content-p;
-                        padding-left: 15px;
-                    }
                 }
             }
         }
