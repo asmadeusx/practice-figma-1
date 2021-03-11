@@ -54,13 +54,17 @@
 
         .catalog__products {
             @include flex-center-row;
+            position: relative;
             justify-content: space-between;
             width: 100%;
+            height: 310px;
 
             .products__item {
                 position: relative;
+                border: 2px solid $header-bg;
                 width: $tc-catalog-product-item-width;
                 height: $tc-catalog-product-item-height;
+                display: none;
 
                 .item__photo {
                     position: absolute;
