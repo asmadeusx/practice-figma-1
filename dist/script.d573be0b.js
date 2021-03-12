@@ -174,55 +174,53 @@ function show(item) {
 
 
 var s3brandList = ['Robe', 'SGM', 'StudioDue', 'ChainMaster', 'Milos', 'Universal Effects', 'ArtLighting', 'MobilTech', 'Lampo', 'Martin'];
-var s3productItemDesc = ['Статичные светодиодные приборы', 'Контроллеры', 'Аксессуары']; // Добавление кнопок с Брендами и создание обработчиков событий на них
+var s3productItemDesc = ['Статичные светодиодные приборы', 'Контроллеры', 'Аксессуары'];
 
 function s3AddBtnsToBrandList() {
   var s3BrandList = document.querySelector('.brand__list');
 
-  for (var i = 0; i < s3brandList.length; i++) {
+  for (var i = 0; i < 10; i++) {
     var btn = document.createElement('button');
     s3BrandList.append(btn);
     btn.innerHTML = "".concat(s3brandList[i]);
     btn.classList.add('list__item');
   }
+}
 
-  var s3brandBtns = document.querySelectorAll('.list__item');
-  s3brandBtns.forEach(function (item) {
-    item.addEventListener('click', function () {
-      var s3productItems = document.querySelectorAll('.products__item');
-      s3productItems.forEach(function (item) {
-        item.remove();
-      }); // if (inHTML == s3brandList[i]) {
-      // };
-      // s3createProductItembyBrand(item.innerHTML);
-    });
-  });
-} // Создание Продуктов по выбранному Бренду после клика.
-
-
-function s3createProductItembyBrand(inHTML) {
-  s3CreateThreeProductItems(0);
-
-  for (var i1 = 0; i1 < s3brandList.length; i1++) {
-    var s3ProductsItems = document.querySelectorAll('.products__item');
-    console.log(s3ProductsItems);
-  }
-} // Создание 3 дивов с картинками по брендам
-
-
-function s3CreateThreeProductItems(x) {
+function s3createProductItem(x) {
   var s3brandProducts = document.querySelector('.catalog__products');
 
   for (var i = 0; i < 3; i++) {
     var div = document.createElement('div');
     s3brandProducts.append(div);
     div.classList.add('products__item');
-    div.innerHTML = "\n        <img src=\"./img/s3-".concat(s3brandList[x].toLowerCase(), "-").concat(i + 1, ".png\" alt=\"").concat(s3brandList[x].toLowerCase(), "-").concat(i + 1, "\" class=\"item__photo\">\n        <div class=\"item__description\">\n            <p>").concat(s3productItemDesc[i], "</p>\n        </div>\n        ");
+    div.innerHTML = "\n        <img src=\"./img/".concat(s3brandList[x], "-item-").concat(i + 1, ".png\" alt=\"").concat(s3brandList[x], "-item-").concat(i + 1, "\" class=\"item__photo\">\n        <div class=\"item__description\">\n            <a href=\"#\" class=\"description__link\"><p>").concat(s3productItemDesc[i], "</p></a>\n        </div>\n        ");
   }
 }
 
-s3createProductItembyBrand();
-s3AddBtnsToBrandList(); //#endregion
+function s3AddCatalogProductsbyBrand() {
+  var s3brandBtns = document.querySelectorAll('.list__item');
+  s3brandBtns.forEach(function (item) {
+    item.addEventListener('click', function () {
+      var s3productItems = document.querySelectorAll('.products__item');
+      s3productItems.forEach(function (item) {
+        item.remove();
+      });
+      s3createProductItembyBrand(item.innerHTML);
+    });
+  });
+}
+
+function s3createProductItembyBrand(inHTML) {
+  for (var i = 0; i < 11; i++) {
+    if (inHTML == s3brandList[i]) {
+      s3createProductItem(i);
+    }
+  }
+}
+
+s3AddBtnsToBrandList();
+s3AddCatalogProductsbyBrand(); //#endregion
 //#region SCREEN - 4 - RENT
 //#endregion
 //#region SCREEN - 5 - NEWS
@@ -257,7 +255,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "7351" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "26799" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

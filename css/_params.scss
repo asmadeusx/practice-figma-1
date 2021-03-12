@@ -38,9 +38,9 @@ $tc-catalog-product-item-width: 350px;
 $tc-catalog-product-item-desc-width: 265px;
 
 $tc-catalog-header-height: $screen-header-height;
-$tc-catalog-categories-list-height: $tc-catalog-header-height - 30;
-$tc-catalog-list-item-height: $tc-catalog-categories-list-height;
-$tc-catalog-product-item-height: 304px;
+$tc-catalog-categories-list-height: $tc-catalog-header-height;
+$tc-catalog-list-item-height: $tc-catalog-header-height - 30;
+$tc-catalog-product-item-height: 340px;
 $tc-catalog-product-item-desc-height: 86px;
 $tc-catalog-height: $tc-catalog-header-height + $tc-catalog-categories-list-height + $tc-catalog-product-item-height;
 

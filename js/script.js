@@ -77,16 +77,33 @@ const s3productItemDesc = [
     'Аксессуары'
 ];
 
-// Добавление кнопок с Брендами и создание обработчиков событий на них
 function s3AddBtnsToBrandList() {
     const s3BrandList = document.querySelector('.brand__list');
-    for (let i = 0; i < s3brandList.length; i++) {
+    for (let i = 0; i < 10; i++) {
         const btn = document.createElement('button');
         s3BrandList.append(btn);
         btn.innerHTML = `${s3brandList[i]}`;
         btn.classList.add('list__item');
     }
+}
 
+function s3createProductItem(x) {
+    const s3brandProducts = document.querySelector('.catalog__products');
+    for (let i = 0; i < 3; i++) {
+        const div = document.createElement('div');
+        s3brandProducts.append(div);
+        div.classList.add('products__item');
+        div.innerHTML =
+            `
+        <img src="./img/${s3brandList[x]}-item-${i+1}.png" alt="${s3brandList[x]}-item-${i+1}" class="item__photo">
+        <div class="item__description">
+            <a href="#" class="description__link"><p>${s3productItemDesc[i]}</p></a>
+        </div>
+        `;
+    }
+}
+
+function s3AddCatalogProductsbyBrand() {
     const s3brandBtns = document.querySelectorAll('.list__item');
     s3brandBtns.forEach(item => {
         item.addEventListener('click', () => {
@@ -94,44 +111,21 @@ function s3AddBtnsToBrandList() {
             s3productItems.forEach(item => {
                 item.remove();
             });
-            // if (inHTML == s3brandList[i]) {
-
-            // };
-            // s3createProductItembyBrand(item.innerHTML);
+            s3createProductItembyBrand(item.innerHTML);
         });
     });
-
 }
-// Создание Продуктов по выбранному Бренду после клика.
+
 function s3createProductItembyBrand(inHTML) {
-    s3CreateThreeProductItems(0);
-    for (let i1 = 0; i1 < s3brandList.length; i1++) {
-        const s3ProductsItems = document.querySelectorAll('.products__item');
-        console.log(s3ProductsItems);
+    for (let i = 0; i < 11; i++) {
+        if (inHTML == s3brandList[i]) {
+            s3createProductItem(i);
+        }
     }
 }
 
-
-// Создание 3 дивов с картинками по брендам
-function s3CreateThreeProductItems(x) {
-    const s3brandProducts = document.querySelector('.catalog__products');
-    for (let i = 0; i < 3; i++) {
-        const div = document.createElement('div');
-        s3brandProducts.append(div);
-        div.classList.add('products__item');
-        div.innerHTML =
-        `
-        <img src="./img/s3-${s3brandList[x].toLowerCase()}-${i+1}.png" alt="${s3brandList[x].toLowerCase()}-${i+1}" class="item__photo">
-        <div class="item__description">
-            <p>${s3productItemDesc[i]}</p>
-        </div>
-        `;
-    }
-}
-
-
-s3createProductItembyBrand();
 s3AddBtnsToBrandList();
+s3AddCatalogProductsbyBrand();
 
 //#endregion
 
