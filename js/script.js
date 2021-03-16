@@ -131,7 +131,7 @@ s3AddCatalogProductsbyBrand();
 
 //#region SCREEN - 4 - RENT
 
-
+const s4ProductRentDesc = document.querySelector('productRent__productDesc');
 
 //#endregion
 
